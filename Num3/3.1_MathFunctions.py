@@ -1,0 +1,10 @@
+import math
+print("exp(1.0)=",math.exp(1.0)) #返回幂函数e^x的值
+print("log(2.78)=",math.log(math.e))    #返回x的自然对数
+print("log(10,10)=",math.log(10,5))     #返回以10为底5的对数
+print("sqrt(4.0)=",math.sqrt(4.0))  #返回4.0的平方根
+print("sin(PI/2)=",math.sin(math.pi/2)) #返回正弦值
+print("cos(PI/2)=",math.cos(math.pi/2)) #返回余弦值
+print("tan(PI/2)=",math.tan(math.pi/2)) #返回正切值
+print("degrees(1.57)=",math.degrees(1.57))  #弧度转角度
+print("radians(90)=",math.radians(90))  #角度转弧度
