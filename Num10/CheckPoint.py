@@ -22,3 +22,36 @@ print(list2)
 #10.13  indexError
 #10.14  [1,1,2,3,4,5,6]
 
+#10.15  [111,3,5,7,9]   [111,3,5,7,9]
+'''
+list1=list(range(1,10,2))
+list2=[]+list1
+list1[0]=111
+print(id(list1))
+print(id(list2))
+print(id(list1[0]))
+'''
+
+#10.16  [111,3,5,7,9]   [1,3,5,7,9]
+#10.17  假
+#10.18  0，3     猜测是5,4,3,2,1  结果是1,2,3,4,5  ，通过下列测试可知，一旦传递到方法中的可变元素对原ID数据进行修改，那么原数组也会发生改变，否则不会对原有的数据有影响，可直接注释赋值运算区域进行测试
+'''
+def main():
+    list=[1,2,3,4,5]
+    print("原ID：",id(list),end=" ")
+    reverse(list)
+    print("方法执行完测试值：",list[0])
+
+def reverse(list):
+    print("传递后ID：",id(list),end=" ")
+    newList=len(list)*[0]
+    for i in range(len(list)):
+        newList[i]=list[len(list)-1-i]
+    print("新数组ID：",id(newList),end=" ")
+    list=newList
+    list[0]=5
+    print("替换后ID：",id(list),end=" ")
+    print("测试值：",list[0])
+main()
+'''
+#10.19  1,2,3/2,3       1,2,3/1,2,3
